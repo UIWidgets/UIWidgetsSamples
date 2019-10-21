@@ -9,33 +9,33 @@ using TextStyle = Unity.UIWidgets.painting.TextStyle;
 namespace UIWidgetsSample {
     public class FontWeightStyle : UIWidgetsSamplePanel {
         protected override void OnEnable() {
-            // To run this sample, you need to download Roboto fonts and place them under Resources/Fonts folder
+            // To run this sample, you need to download Roboto fonts and place them under Resources/fonts folder
             // Roboto fonts could be downloaded from google website
             // https://fonts.google.com/specimen/Roboto?selection.family=Roboto
-            FontManager.instance.addFont(Resources.Load<Font>(path: "MaterialIcons-Regular"), "Material Icons");
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-Black"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/MaterialIcons-Regular"), "Material Icons");
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-Black"), "Roboto",
                 FontWeight.w900);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-BlackItalic"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-BlackItalic"), "Roboto",
                 FontWeight.w900, FontStyle.italic);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-Bold"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-Bold"), "Roboto",
                 FontWeight.bold);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-BoldItalic"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-BoldItalic"), "Roboto",
                 FontWeight.bold, FontStyle.italic);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-Regular"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-Regular"), "Roboto",
                 FontWeight.normal);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-Italic"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-Italic"), "Roboto",
                 FontWeight.normal, FontStyle.italic);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-Medium"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-Medium"), "Roboto",
                 FontWeight.w500);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-MediumItalic"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-MediumItalic"), "Roboto",
                 FontWeight.w500, FontStyle.italic);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-Light"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-Light"), "Roboto",
                 FontWeight.w300);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-LightItalic"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-LightItalic"), "Roboto",
                 FontWeight.w300, FontStyle.italic);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-Thin"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-Thin"), "Roboto",
                 FontWeight.w100);
-            FontManager.instance.addFont(Resources.Load<Font>(path: "Fonts/Roboto-ThinItalic"), "Roboto",
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/Roboto-ThinItalic"), "Roboto",
                 FontWeight.w100, FontStyle.italic);
             
             base.OnEnable();

@@ -14,8 +14,8 @@ using UIWidgetRect = Unity.UIWidgets.ui.Rect;
 
 public class AntialiasSVGSample : UIWidgetsPanel {
     protected override void OnEnable() {
-        FontManager.instance.addFont(Resources.Load<Font>("MaterialIcons-Regular"), "Material Icons");
-        FontManager.instance.addFont(Resources.Load<Font>("GalleryIcons"), "GalleryIcons");
+        FontManager.instance.addFont(Resources.Load<Font>("fonts/MaterialIcons-Regular"), "Material Icons");
+        FontManager.instance.addFont(Resources.Load<Font>("fonts/GalleryIcons"), "GalleryIcons");
 
         base.OnEnable();
     }

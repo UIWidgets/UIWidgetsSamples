@@ -16,7 +16,7 @@ namespace UIWidgetsSample {
 
         protected override void OnEnable() {
             base.OnEnable();
-            FontManager.instance.addFont(Resources.Load<Font>(path: "MaterialIcons-Regular"), "Material Icons");
+            FontManager.instance.addFont(Resources.Load<Font>(path: "fonts/MaterialIcons-Regular"), "Material Icons");
         }
     }
 
