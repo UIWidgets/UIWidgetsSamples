@@ -39,10 +39,6 @@ namespace UIWidgetsSample {
         void _handlePress() {
             Debug.Log("Long Pressed Text");
         }
-        /*
-        
-        Any professional looking app you have seen probably has multiple screens in it. It can contain a welcome screen, a login screen and then further screens. 
-        */
 
         public override Widget build(BuildContext context) {
             return new RichText(
@@ -55,8 +51,8 @@ namespace UIWidgetsSample {
                             style: new TextStyle(
                                 color: Colors.green,
                                 decoration: TextDecoration.underline
-                            )
-                            //recognizer: this._longPressRecognizer
+                            ),
+                            recognizer: this._longPressRecognizer
                         ),
                         new TextSpan(
                             text: " secret?"

@@ -8,24 +8,24 @@ using Unity.UIWidgets.widgets;
 using TextStyle = Unity.UIWidgets.painting.TextStyle;
 
 namespace UIWidgetsSample {
-    public class DividerButton : UIWidgetsSamplePanel {
+    public class DividerAndButton : UIWidgetsSamplePanel {
         
         protected override Widget createWidget() {
             return new WidgetsApp(
-                home: new DemoApp(),
+                home: new DividerAndButtonSample(),
                 pageRouteBuilder: this.pageRouteBuilder);
         }
         
-        public class DemoApp : StatefulWidget {
-            public DemoApp(Key key = null) : base(key) {
+        public class DividerAndButtonSample : StatefulWidget {
+            public DividerAndButtonSample(Key key = null) : base(key) {
             }
 
             public override State createState() {
-                return new _DemoAppState();
+                return new _DividerAndButtonState();
             }
         }
 
-        public class _DemoAppState : State<DemoApp> {
+        public class _DividerAndButtonState : State<DividerAndButtonSample> {
             string title = "Hello";
             string subtitle = "World";
             TextEditingController controller = new TextEditingController("");
