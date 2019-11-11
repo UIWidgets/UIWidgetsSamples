@@ -37,12 +37,12 @@ Repository to the **Asset** folder of your project.
 ## Guide
 
 #### Runtime UIs
-In the **Scenes** folder you can find all the demo scenes which illustrates different features of UIWidgets.
+In the **Scenes** folder you can find all the demo scenes which illustrate different features of UIWidgets.
 More specifically, the **UIWidgetsGallery** scene contains a Gallery demo of UIWidgets. It is mainly derived from 
-flutter Gallery demo and will provides you a big picture about "What UIWidgets can do".
+the flutter Gallery demo and will provides you a big picture about "What UIWidgets can do".
 
 In the **UIWidgetsTheatre** scene you can switch between some deliberately chosen UIWidgets Panels, each 
-focuses on one specific feature of UIWidgets.
+focusing on one specific feature of UIWidgets.
 
 The implementations of all the demo UI widgets are located in different folders. In short:
 * **MaterialSample** contains sample codes of material scheme widgets
@@ -53,7 +53,7 @@ The implementations of all the demo UI widgets are located in different folders.
 
 #### EditorWindow UIs
 UIWidgets can also be used to create EditorWindows in Unity. 
-Please clicking the new **UIWidgetsTests** tab on the main menu
-and open one of the dropdown samples to see all the EditorWindow examples.
+Please click the new **UIWidgetsTests** tab on the main menu
+and open one of the dropdown samples to see the corresponding EditorWindow example.
 
-All the samples codes of EditorWindow samples are located in the **Editor** folder.
+All the codes of the EditorWindow samples are located in the **Editor** folder.
