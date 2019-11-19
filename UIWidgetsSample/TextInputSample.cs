@@ -177,7 +177,55 @@ namespace UIWidgetsSample {
                         backgroundCursorColor: Colors.transparent,
                         selectionColor: selectionColor, maxLines: 4,
                         onSubmitted: this.textSubmitted, unityTouchKeyboard: unityKeyboard,
-                        selectionControls: MaterialUtils.materialTextSelectionControls)))));
+                        selectionControls: MaterialUtils.materialTextSelectionControls,
+                        globalKeyEventHandler: (evt, enableCustomAction) => {
+                            //customized key event handler which may swallow input keys to the editable and 
+                            //perform customized functionality
+                            //
+                            //evt is the input rawKeyEvent
+                            //you should perform any customized functionality within the closure of "if(enableCustomAction) {}", 
+                            //otherwise it could be performed multiple times for a single key event.
+                            //
+                            //Very Important: for any input event, please ensure that all the output RawInputKeyResponse is the same
+                            //regardless of the value of enableCustomAction, otherwise the behavior of this handler would become
+                            //wrong and unpredictable
+                            if (evt.data.unityEvent.keyCode == KeyCode.UpArrow) {
+                                if (enableCustomAction) {
+                                    Debug.Log("UpUpUp");
+                                }
+
+                                return RawInputKeyResponse.swallowResponse;
+                            }
+
+                            if (evt.data.unityEvent.keyCode == KeyCode.DownArrow) {
+                                if (enableCustomAction) {
+                                    Debug.Log("UpUpUp");
+                                }
+
+                                return RawInputKeyResponse.swallowResponse;
+                            }
+
+                            if (evt.data.unityEvent.character == '\n' ||
+                                evt.data.unityEvent.character == '\r' ||
+                                evt.data.unityEvent.character == 3 ||
+                                evt.data.unityEvent.character == 10) {
+
+                                if (evt.data.unityEvent.shift) {
+                                    if (enableCustomAction) {
+                                        Debug.Log("shift return >>>");
+                                    }
+                                    return new RawInputKeyResponse(true, evt.data.unityEvent.character, inputAction: TextInputAction.newline);
+                                }
+                                else {
+                                    if (enableCustomAction) {
+                                        Debug.Log("send !!!!");
+                                    }
+                                    return RawInputKeyResponse.swallowResponse;
+                                }
+                            }
+                                        
+                            return RawInputKeyResponse.convert(evt);
+                        })))));
 
             widgets.Add(this.rowWidgets("ObscureText", new EditStateProvider(
                 builder: ((buildContext, controller, node) =>

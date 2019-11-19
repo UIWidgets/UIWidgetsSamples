@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.UIWidgets.engine;
 using Unity.UIWidgets.foundation;
 using Unity.UIWidgets.material;
+using Unity.UIWidgets.rendering;
 using Unity.UIWidgets.widgets;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -44,6 +45,7 @@ class _AsyncRequestWidgetState : State<AsyncRequestWidget> {
     public override Widget build(BuildContext context) {
         
         return new Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: new List<Widget>() {
                 new FlatButton(child: new Text("Click To Get Time"), onPressed: () => {
                     UnityWebRequest www = UnityWebRequest.Get("http://worldclockapi.com/api/json/est/now");
