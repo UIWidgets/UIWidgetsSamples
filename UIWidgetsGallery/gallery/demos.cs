@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.UIWidgets.foundation;
+using Unity.UIWidgets.material;
 using Unity.UIWidgets.widgets;
 
 namespace UIWidgetsGallery.gallery {
@@ -402,15 +403,15 @@ namespace UIWidgetsGallery.gallery {
                 //     documentationUrl: "https://docs.flutter.io/flutter/material/RefreshIndicator-class.html",
                 //     buildRoute: (BuildContext context) => OverscrollDemo()
                 // ),
-                // new GalleryDemo(
-                //     title: "Search",
-                //     subtitle: "Expandable search",
-                //     icon: Icons.search,
-                //     category: GalleryDemoCategory._kMaterialComponents,
-                //     routeName: SearchDemo.routeName,
-                //     documentationUrl: "https://docs.flutter.io/flutter/material/showSearch.html",
-                //     buildRoute: (BuildContext context) => SearchDemo()
-                // ),
+                new GalleryDemo(
+                    title: "Search",
+                    subtitle: "Expandable search",
+                    icon: Icons.search,
+                    category: _kMaterialComponents,
+                    routeName: SearchDemo.routeName,
+                    documentationUrl: "https://docs.flutter.io/flutter/material/showSearch.html",
+                    buildRoute: (BuildContext context) => new SearchDemo()
+                ),
                 // new GalleryDemo(
                 //     title: "Selection controls",
                 //     subtitle: "Checkboxes, radio buttons, and switches",
